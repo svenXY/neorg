@@ -596,6 +596,7 @@ module.public = {
         local languagetree = vim.treesitter.get_parser(buf, "norg")
 
         if not languagetree then
+            print("no languagetree")
             return
         end
 
@@ -668,7 +669,7 @@ module.public = {
 
                             ::continue::
                         end
-
+                        print("result: " .. resulting_object)
                         return resulting_object
                     end,
                 })
