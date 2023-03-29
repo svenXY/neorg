@@ -227,6 +227,8 @@ module.private = {
             local buffer = vim.fn.bufadd(folder_name .. neorg.configuration.pathsep .. file)
             local meta = module.required["core.integrations.treesitter"].get_document_metadata(buffer)
             local title = meta["title"]
+            print(vim.inspect(meta))
+            print(vim.inspect(title))
             return title
         end
 
